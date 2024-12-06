@@ -5,6 +5,7 @@ document.body.style.flexDirection = "column";
 document.body.style.alignItems = "center";   // Centers elements horizontally
 document.body.style.justifyContent = "center"; // Centers elements vertically
 document.body.style.height = "100vh";  // Make sure the body takes up full height of the viewport
+document.body.style.backgroundImage = "url('image.jpg')";
 
 //for determining if its a fruit or flower we have to have th
 let fruits = [
@@ -33,11 +34,18 @@ const smallContainer = document.createElement("small_container");
 smallContainer.style.marginBottom = "20px";
 smallContainer.style.display = "flex"; // Enable flexbox
 smallContainer.style.justifyContent = "space-between"; // Space between children
+smallContainer.style.flexDirection = "column";
 smallContainer.style.gap = "10px"; // Add space between child elements
 smallContainer.style.alignItems = "center";
+smallContainer.style.width = "400px";
+smallContainer.style.height = "400px";
+smallContainer.style.borderRadius = "15px";
 
+smallContainer.style.backgroundColor = "lightblue";
 
 const selectBox = document.createElement("select");
+selectBox.style.width = "300px";
+selectBox.style.height = "20px";
 
 const fruitOption = document.createElement("option");
 fruitOption.text = "fruits";
@@ -48,69 +56,61 @@ flowerOption.text = "flowers";
 selectBox.appendChild(flowerOption);
 
 
-
 smallContainer.appendChild(selectBox);
-
-const inputBtn = document.createElement("button");
-inputBtn.textContent = "Insert";
-inputBtn.style.width = "100px";
-inputBtn.style.height = "20px";
-smallContainer.appendChild(inputBtn);
-
-const makeListBtn = document.createElement("button");
-makeListBtn.textContent = "make list";
-makeListBtn.style.width = "100px";
-makeListBtn.style.height = "20px";
-smallContainer.appendChild(makeListBtn);
-
-document.body.appendChild(smallContainer);
 
 const containter = document.createElement("div");
 containter.style.display = "flex";
 containter.style.flexDirection = "row"; // Align items vertically
 containter.style.alignItems = "center"; // Center items horizontally
-containter.style.justifyContent = "space-between"; // Add space between items
-containter.style.height = "200px";
-containter.style.width = "400px";
+//containter.style.justifyContent = "space-between"; // Add space between items
+containter.style.height = "400px";
+containter.style.width = "800px";
 containter.style.gap = "10px"; // Add space between child elements
 
 
-// const inputBox = document.createElement("textarea");
 
-// inputBox.style.width = "170px"; // Width of the input box
-// inputBox.style.height = "170px"; // Height of the input box
-// inputBox.style.borderRadius = "15%"; // Rounded corners
-// inputBox.style.border = "none"; // Removes the black border
-// inputBox.style.outline = "none"; // Removes focus outline (if needed)
-// inputBox.style.textAlign = "left"; // Aligns the text to the left
-// inputBox.style.padding = "15px"; // Adds padding inside the box to avoid text touching the edges
-// inputBox.style.lineHeight = "normal"; // Normal line height (optional, adjusts spacing)
-// inputBox.style.verticalAlign = "top"; // Aligns the text at the top
-// inputBox.style.whiteSpace = "pre-wrap"; // Ensures text wraps within the box
-// inputBox.style.color =  "#FFC0CB";
+const inputBox = document.createElement("textarea");
 
-
-
-const inputBox = document.createElement("input");
-inputBox.placeholder.text = "Enter text:";
-inputBox.style.width = "200px"; // Width of the input box
-inputBox.style.height = "80px"; // Height of the input box
+inputBox.style.width = "300px"; // Width of the input box
+inputBox.style.height = "200px"; // Height of the input box
 inputBox.style.borderRadius = "15%"; // Rounded corners
 inputBox.style.border = "none"; // Removes the black border
 inputBox.style.outline = "none"; // Removes focus outline (if needed)
+inputBox.style.textAlign = "left"; // Aligns the text to the left
+inputBox.style.padding = "15px"; // Adds padding inside the box to avoid text touching the edges
+inputBox.style.lineHeight = "normal"; // Normal line height (optional, adjusts spacing)
+inputBox.style.verticalAlign = "top"; // Aligns the text at the top
+inputBox.style.whiteSpace = "pre-wrap"; // Ensures text wraps within the box
 inputBox.style.color =  "#FFC0CB";
 
+smallContainer.appendChild(inputBox);
 
-containter.appendChild(inputBox);
+
+const inputBtn = document.createElement("button");
+inputBtn.textContent = "Insert";
+inputBtn.style.width = "300px";
+inputBtn.style.height = "25px";
+smallContainer.appendChild(inputBtn);
+
+const makeListBtn = document.createElement("button");
+makeListBtn.textContent = "make list";
+makeListBtn.style.width = "300px";
+makeListBtn.style.height = "25px";
+smallContainer.appendChild(makeListBtn);
+
+
+containter.appendChild(smallContainer);
+
 
 
 const listContainter = document.createElement("div");
 listContainter.style.backgroundColor = "white";
-listContainter.style.width = "200px";
-listContainter.style.height = "200px";
-listContainter.style.borderRadius = "15%";
-listContainter.style.color = "#FFC0CB";
+listContainter.style.width = "400px";
+listContainter.style.height = "400px";
+listContainter.style.borderRadius = "15px";
+listContainter.style.color = "white";
 listContainter.style.paddingLeft = "10px";
+listContainter.style.backgroundColor = "pink";
 listContainter.setAttribute('id', 'list-container');
 
 containter.appendChild(listContainter);
