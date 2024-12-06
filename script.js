@@ -45,8 +45,8 @@ smallContainer.style.backgroundColor = "lightblue";
 
 const selectBox = document.createElement("select");
 selectBox.style.width = "300px";
-selectBox.style.height = "20px";
-
+selectBox.style.height = "30px";
+selectBox.style.fontSize = "16px";
 const fruitOption = document.createElement("option");
 fruitOption.text = "fruits";
 selectBox.appendChild(fruitOption);
@@ -71,8 +71,8 @@ containter.style.gap = "10px"; // Add space between child elements
 
 const inputBox = document.createElement("textarea");
 
-inputBox.style.width = "300px"; // Width of the input box
-inputBox.style.height = "200px"; // Height of the input box
+inputBox.style.width = "250px"; // Width of the input box
+inputBox.style.height = "190px"; // Height of the input box
 inputBox.style.borderRadius = "15%"; // Rounded corners
 inputBox.style.border = "none"; // Removes the black border
 inputBox.style.outline = "none"; // Removes focus outline (if needed)
@@ -89,13 +89,27 @@ smallContainer.appendChild(inputBox);
 const inputBtn = document.createElement("button");
 inputBtn.textContent = "Insert";
 inputBtn.style.width = "300px";
-inputBtn.style.height = "25px";
+inputBtn.style.height = "30px";
+inputBtn.style.borderRadius = "5px";
+inputBtn.style.border = "none";
+inputBtn.style.backgroundColor = "#4682b4";
+inputBtn.style.color = "white";
+inputBtn.style.fontSize = "16px";
+inputBtn.addEventListener("mouseover", () => inputBtn.style.backgroundColor = "#5a9bd8");
+inputBtn.addEventListener("mouseout", () => inputBtn.style.backgroundColor = "#4682b4");
 smallContainer.appendChild(inputBtn);
 
 const makeListBtn = document.createElement("button");
-makeListBtn.textContent = "make list";
+makeListBtn.textContent = "Make List";
 makeListBtn.style.width = "300px";
-makeListBtn.style.height = "25px";
+makeListBtn.style.height = "30px";
+makeListBtn.style.borderRadius = "5px";
+makeListBtn.style.border = "none";
+makeListBtn.style.backgroundColor = "#4682b4";
+makeListBtn.style.color = "white";
+makeListBtn.style.fontSize = "16px";
+makeListBtn.addEventListener("mouseover", () => inputBtn.style.backgroundColor = "#5a9bd8");
+makeListBtn.addEventListener("mouseout", () => inputBtn.style.backgroundColor = "#4682b4");
 smallContainer.appendChild(makeListBtn);
 
 
@@ -112,7 +126,8 @@ listContainter.style.color = "white";
 listContainter.style.paddingLeft = "10px";
 listContainter.style.backgroundColor = "pink";
 listContainter.style.overflowY = "auto";
-
+listContainter.style.fontSize = "20px";
+listContainter.style.paddingLeft = "20px";
 listContainter.setAttribute('id', 'list-container');
 
 containter.appendChild(listContainter);
@@ -165,7 +180,4 @@ makeListBtn.addEventListener("click",function() {
 
 });
 
-
-
 document.body.appendChild(containter);
-
