@@ -31,16 +31,16 @@ title.style.textAlign = "center";
 document.body.appendChild(title);
 
 const smallContainer = document.createElement("small_container");
-smallContainer.style.marginBottom = "20px";
+smallContainer.style.paddingTop = "20px";
+smallContainer.style.paddingBottom = "20px";
 smallContainer.style.display = "flex"; // Enable flexbox
 smallContainer.style.justifyContent = "space-between"; // Space between children
 smallContainer.style.flexDirection = "column";
 smallContainer.style.gap = "10px"; // Add space between child elements
 smallContainer.style.alignItems = "center";
 smallContainer.style.width = "400px";
-smallContainer.style.height = "400px";
+smallContainer.style.height = "360px";
 smallContainer.style.borderRadius = "15px";
-
 smallContainer.style.backgroundColor = "lightblue";
 
 const selectBox = document.createElement("select");
@@ -111,6 +111,8 @@ listContainter.style.borderRadius = "15px";
 listContainter.style.color = "white";
 listContainter.style.paddingLeft = "10px";
 listContainter.style.backgroundColor = "pink";
+listContainter.style.overflowY = "auto";
+
 listContainter.setAttribute('id', 'list-container');
 
 containter.appendChild(listContainter);
